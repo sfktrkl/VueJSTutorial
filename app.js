@@ -8,5 +8,22 @@ new Vue({
     data: {
         // Vue Instance
         name: 'VueJS Tutorial',
+
+        // Data & Methods
+        firstTitle: 'Data & Methods',
+        time: 'Night',
+    },
+    methods: {
+        // Data & Methods
+        gMorning: function () {
+            return 'Good Morning';
+        },
+        gTime: function (time) {
+            return 'Good ' + time;
+        },
+        gNight: function () {
+            // Properties can also be accessed inside the methods
+            return 'Good ' + this.time;
+        },
     }
 })
