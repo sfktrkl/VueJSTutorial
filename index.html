@@ -24,6 +24,17 @@
     <!-- Parameters can be passed also -->
     <p>{{gTime('Afternoon')}}</p>
     <p>{{gNight()}}</p>
+
+    <!-- Data Binding -->
+    <h2>Data Binding</h2>
+    <!-- Bind data to attribute using 'v-bind' directive -->
+    <p><a v-bind:href="link">SfkTRKL GitHub</a></p>
+    <!-- As a shortcut ':' can be used instead of 'v-bind:' -->
+    <p><a :href="link">SfkTRKL GitHub</a></p>
+    <!-- Bind to another attribute -->
+    <p><input type="text" :value="sfktrkl" /></p>
+    <!-- Use stored html string with v-html directive -->
+    <p v-html="rawHTML"></p>
   </div>
 
   <script src="app.js"></script>

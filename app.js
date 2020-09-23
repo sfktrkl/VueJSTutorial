@@ -12,6 +12,11 @@ new Vue({
         // Data & Methods
         firstTitle: 'Data & Methods',
         time: 'Night',
+
+        // Data Binding
+        link: 'https://github.com/sfktrkl',
+        sfktrkl: 'SfkTRKL',
+        rawHTML: '<a href="https://github.com/sfktrkl">SfkTRKL GitHub</a>',
     },
     methods: {
         // Data & Methods
