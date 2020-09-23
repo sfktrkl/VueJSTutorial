@@ -6,5 +6,17 @@
   <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
+  <!-- This root element will be controlled by the vue instance -->
+  <div id="vue-app">
+    <!-- Vue Instance -->
+    <!-- Behind the scenes VueJS is taking this html code,
+      creating a template from it in JavaScript format,
+      attaching any kind of data that we want to output
+      and then it is building the resulting html code and
+      it is going to render that html code -->
+    <h1>{{name}}</h1>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
