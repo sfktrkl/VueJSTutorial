@@ -42,6 +42,14 @@ new Vue({
         error: false,
         success: false,
         warning: false,
+
+        // Loops
+        characters: ['A', 'B', 'C'],
+        objects: [
+            { name: 'A', age: 20 },
+            { name: 'B', age: 30 },
+            { name: 'C', age: 40 },
+        ],
     },
     methods: {
         // Data & Methods

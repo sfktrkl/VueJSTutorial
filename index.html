@@ -111,6 +111,27 @@
     <!-- 'v-show' directive does not remove the element from DOM,
          it sets the display style of the element to none -->
     <p v-show="warning">Warning</p>
+
+    <!-- Loops -->
+    <h2>Loops</h2>
+    <p v-for="character in characters">{{character}}</p>
+    <h3>Get index of item in array</h3>
+    <!-- Use index to get item's position in the array -->
+    <div v-for="(object, index) in objects">
+      <p>{{index}} . {{object.name}} - {{object.age}}</p>
+    </div>
+    <h3>Use template for cleaner markup</h3>
+    <!-- Use template for cleaner markup, it won't add div tags to html -->
+    <template v-for="(object, index) in objects">
+      <p>{{index}} . {{object.name}} - {{object.age}}</p>
+    </template>
+    <h3>Loop through keys and values of objects</h3>
+    <!-- Cycle through the object and get value and key of the object-->
+    <template v-for="object in objects">
+      <div v-for="(val, key) in object">
+        <p>{{key}} - {{val}}</p>
+      </div>
+    </template>
   </div>
 
   <script src="app.js"></script>
