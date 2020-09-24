@@ -27,6 +27,12 @@ new Vue({
 
         // Two-Way Data Binding
         boundName: '',
+
+        // Computed Properties
+        addedAge: 20,
+        a: 0,
+        b: 0,
+        c: 0,
     },
     methods: {
         // Data & Methods
@@ -67,6 +73,24 @@ new Vue({
         },
         logAge: function () {
             console.log('entered age');
+        },
+
+        // Computed Properties
+        addToA: function () {
+            // Create a log to see when methods are called.
+            console.log('addToA');
+            return this.addedAge + this.a;
+        },
+        addToB: function () {
+            console.log('addToB');
+            return this.addedAge + this.b;
+        },
+    },
+    computed: {
+        // Computed Properties
+        addToC: function () {
+            console.log('addToC');
+            return this.addedAge + this.c;
         },
     }
 })

@@ -74,6 +74,19 @@
     <label>Name:</label>
     <input type="text" v-model="boundName"/>
     <span>{{boundName}}</span>
+
+    <!-- Computed Properties -->
+    <h2>Computed Properties</h2>
+    <button @click="a++">@click="a++"</button>
+    <button @click="b++">@click="b++"</button>
+    <button @click="c++">@click="c++"</button>
+    <!-- Everytime when a value changes, these functions will run -->
+    <p>A - {{a}} -- Age + A {{addToA()}}</p>
+    <p>B - {{b}} -- Age + B {{addToB()}}</p>
+    <!-- Use computed properties to avoid this behaviour,
+         so 'addToC' function will not run everytime,
+         it will run only when needed -->
+    <p>C - {{c}} -- Age + C {{addToC}}</p>
   </div>
 
   <script src="app.js"></script>
