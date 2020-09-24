@@ -68,6 +68,12 @@
     <!-- Use modifiers to execute function when entered -->
     <label>Age:</label>
     <input type="text" @keyup.enter="logAge()" />
+
+    <!-- Two-Way Data Binding -->
+    <h2>Two-Way Data Binding</h2>
+    <label>Name:</label>
+    <input type="text" v-model="boundName"/>
+    <span>{{boundName}}</span>
   </div>
 
   <script src="app.js"></script>

@@ -24,6 +24,9 @@ new Vue({
 
         // Event Modifiers
         text: 'a',
+
+        // Two-Way Data Binding
+        boundName: '',
     },
     methods: {
         // Data & Methods
