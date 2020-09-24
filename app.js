@@ -37,6 +37,11 @@ new Vue({
         // Dynamic CSS
         available: false,
         nearby: false,
+
+        // Conditionals
+        error: false,
+        success: false,
+        warning: false,
     },
     methods: {
         // Data & Methods
