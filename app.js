@@ -166,3 +166,27 @@ var vueTwo = new Vue({
         }
     }
 })
+
+// Components
+Vue.component('greeting', {
+    template: '<p>{{greet}}, I am the greeting component <button @click="changeGreet">Change greet</button></p>',
+    // Data can be passed to vue instances, but data should be a function and return the object.
+    // Since, there may be more then one vue instances which will use this component, object will be shared.
+    // So, when object is changed inside one of the vue instances, all instances will use that changed data.
+    // Hence, return data with a function to create a fresh one every time.
+    data: function () {
+        return { greet: 'Hello' }
+    },
+    methods: {
+        changeGreet: function () {
+            this.greet = 'Good bye';
+        }
+    },
+})
+
+new Vue({
+    el: '#vue-component-one',
+})
+new Vue({
+    el: '#vue-component-two',
+})
