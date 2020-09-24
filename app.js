@@ -33,6 +33,10 @@ new Vue({
         a: 0,
         b: 0,
         c: 0,
+
+        // Dynamic CSS
+        available: false,
+        nearby: false,
     },
     methods: {
         // Data & Methods
@@ -91,6 +95,11 @@ new Vue({
         addToC: function () {
             console.log('addToC');
             return this.addedAge + this.c;
+        },
+
+        // Dynamic CSS
+        compClasses: function () {
+            return { available: this.available, nearby: this.nearby }
         },
     }
 })

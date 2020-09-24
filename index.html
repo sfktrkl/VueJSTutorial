@@ -87,6 +87,19 @@
          so 'addToC' function will not run everytime,
          it will run only when needed -->
     <p>C - {{c}} -- Age + C {{addToC}}</p>
+
+    <!-- Dynamic CSS -->
+    <h2>Dynamic CSS</h2>
+    <button @click="available = !available">Toggle available</button>
+    <div :class="{available: available}">
+      <span class="dynamic">Safak</span>
+    </div>
+    <!-- Use computed property to get more classes instead of
+         adding every class to template -->
+    <button @click="nearby = !nearby">Toggle nearby</button>
+    <div @click="available = !available" :class="compClasses">
+      <span class="dynamic">Safak</span>
+    </div>
   </div>
 
   <script src="app.js"></script>
