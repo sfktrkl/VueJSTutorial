@@ -50,6 +50,15 @@
     <button @click="addAge">addAge</button>
     <!-- Use another event -->
     <div id="canvas" @mousemove="updateCoord">{{coord[0]}}, {{coord[1]}}</div>
+
+    <!-- Event Modifiers -->
+    <!-- https://vuejs.org/v2/guide/events.html#Event-Modifiers -->
+    <h2>Event Modifiers</h2>
+    <p>Text: {{text}}</p>
+    <!-- Use modifier to listen click event 'once' -->
+    <button @click.once="addCharacter">@click.once="addCharacter"</button>
+    <!-- 'Prevent' default behaviour of link -->
+    <p><a href="link" @click.prevent="linkClick">SfkTRKL GitHub</a></p>
   </div>
 
   <script src="app.js"></script>

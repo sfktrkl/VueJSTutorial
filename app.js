@@ -21,6 +21,9 @@ new Vue({
         // Events
         age: 25,
         coord: [0, 0],
+
+        // Event Modifiers
+        text: 'a',
     },
     methods: {
         // Data & Methods
@@ -45,6 +48,14 @@ new Vue({
         // When an event is performed, 'event' object already passed
         updateCoord: function (event) {
             this.coord = [event.offsetX, event.offsetY];
+        },
+
+        // Event Modifiers
+        addCharacter: function () {
+            this.text += 'a';
+        },
+        linkClick: function () {
+            alert('@click.prevent="linkClick"');
         },
     }
 })
