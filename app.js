@@ -57,5 +57,13 @@ new Vue({
         linkClick: function () {
             alert('@click.prevent="linkClick"');
         },
+
+        // Keyboard Events
+        logName: function () {
+            console.log('entered name');
+        },
+        logAge: function () {
+            console.log('entered age');
+        },
     }
 })

@@ -59,6 +59,15 @@
     <button @click.once="addCharacter">@click.once="addCharacter"</button>
     <!-- 'Prevent' default behaviour of link -->
     <p><a href="link" @click.prevent="linkClick">SfkTRKL GitHub</a></p>
+
+    <!-- Keyboard Events -->
+    <!-- https://vuejs.org/v2/guide/events.html#Key-Modifiers -->
+    <h2>Keyboard Events</h2>
+    <label>Name:</label>
+    <input type="text" @keyup="logName()" />
+    <!-- Use modifiers to execute function when entered -->
+    <label>Age:</label>
+    <input type="text" @keyup.enter="logAge()" />
   </div>
 
   <script src="app.js"></script>
