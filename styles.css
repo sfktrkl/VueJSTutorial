@@ -1,0 +1,9 @@
+/* Events */
+/* Create a canvas for mousemove event tutorial */
+#canvas {
+  width: 500px;
+  margin-top: 10px;
+  padding: 50px;
+  text-align: center;
+  border: 1px solid red;
+}

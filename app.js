@@ -17,6 +17,10 @@ new Vue({
         link: 'https://github.com/sfktrkl',
         sfktrkl: 'SfkTRKL',
         rawHTML: '<a href="https://github.com/sfktrkl">SfkTRKL GitHub</a>',
+
+        // Events
+        age: 25,
+        coord: [0, 0],
     },
     methods: {
         // Data & Methods
@@ -29,6 +33,18 @@ new Vue({
         gNight: function () {
             // Properties can also be accessed inside the methods
             return 'Good ' + this.time;
+        },
+
+        // Events
+        addAge: function () {
+            this.age += 1;
+        },
+        updateAge: function(value) {
+            this.age += value;
+        },
+        // When an event is performed, 'event' object already passed
+        updateCoord: function (event) {
+            this.coord = [event.offsetX, event.offsetY];
         },
     }
 })

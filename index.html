@@ -35,6 +35,21 @@
     <p><input type="text" :value="sfktrkl" /></p>
     <!-- Use stored html string with v-html directive -->
     <p v-html="rawHTML"></p>
+
+    <!-- Events -->
+    <h2>Events</h2>
+    <p>My Age is {{age}}</p>
+    <!-- Use 'v-on' directive to listen click event -->
+    <button v-on:click="updateAge(1)">v-on:click="updateAge(1)"</button>
+    <!-- As a shortcut '@' can be used instead of 'v-on'-->
+    <button @click="updateAge(-1)">@click="updateAge(-1)"</button>
+    <br>
+    <!-- Code can be executed directly inside the quotations -->
+    <button v-on:click="age = 50">age = 50</button>
+    <!-- When there is no parameters, paranthesis does not needed -->
+    <button @click="addAge">addAge</button>
+    <!-- Use another event -->
+    <div id="canvas" @mousemove="updateCoord">{{coord[0]}}, {{coord[1]}}</div>
   </div>
 
   <script src="app.js"></script>
