@@ -190,3 +190,17 @@ new Vue({
 new Vue({
     el: '#vue-component-two',
 })
+
+// Referencing
+new Vue({
+    el: '#vue-reference',
+    data: {
+        output: '',
+    },
+    methods: {
+        readRefs: function () {
+            this.output = this.$refs.test.value;
+        },
+    }
+})
+
