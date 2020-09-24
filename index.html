@@ -145,6 +145,18 @@
     </div>
   </div>
 
+  <!-- Multiple Vue Instances -->
+  <h2>Multiple Vue Instances</h2>
+  <div id="vue-app-one">
+    <h3>{{title}}</h3>
+    <p>{{greet}}</p>
+  </div>
+  <div id="vue-app-two">
+    <h3>{{title}}</h3>
+    <p>{{greet}}</p>
+    <button @click="changeTitle">Change app one title</button>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>

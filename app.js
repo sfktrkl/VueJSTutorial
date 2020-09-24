@@ -132,3 +132,37 @@ new Vue({
         },
     }
 })
+
+// Multiple Vue instances
+var vueOne = new Vue({
+    el: '#vue-app-one',
+    data: {
+        title: 'Vue One',
+    },
+    methods: {
+
+    },
+    computed: {
+        greet: function () {
+            return 'Hello from app one';
+        }
+    }
+})
+
+var vueTwo = new Vue({
+    el: '#vue-app-two',
+    data: {
+        title: 'Vue Two',
+    },
+    methods: {
+        changeTitle: function () {
+            // Other vue instances can be accessed with their variable names.
+            vueOne.title = 'Hello again from app two';
+        }
+    },
+    computed: {
+        greet: function () {
+            return 'Hello from app two';
+        }
+    }
+})
