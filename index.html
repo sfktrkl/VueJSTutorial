@@ -132,6 +132,17 @@
         <p>{{key}} - {{val}}</p>
       </div>
     </template>
+
+    <!-- Punchbag game -->
+    <h2>Punchbag game</h2>
+    <div id="bag" :class="{burst: ended}"></div>
+    <div id="bag-health">
+      <div :style="{width: health + '%'}"></div>
+    </div>
+    <div id="controls">
+      <button @click="punch" v-show="!ended">Punch</button>
+      <button @click="restart" v-show="ended">Restart</button>
+    </div>
   </div>
 
   <script src="app.js"></script>

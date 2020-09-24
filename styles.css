@@ -25,3 +25,28 @@
   content: "nearby";
   margin-left: 10px;
 }
+
+/* Punchbag game */
+#bag {
+  width: 200px;
+  height: 500px;
+  background: url(./img/bag.png) center no-repeat;
+}
+
+#bag.burst {
+  background: url(./img/bag-burst.png) center no-repeat;
+}
+
+#bag-health {
+  width: 200px;
+  border: 2px solid #000;
+}
+
+#bag-health div {
+  height: 20px;
+  background: crimson;
+}
+
+#controls {
+  margin: 10px 70px;
+}

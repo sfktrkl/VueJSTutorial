@@ -50,6 +50,10 @@ new Vue({
             { name: 'B', age: 30 },
             { name: 'C', age: 40 },
         ],
+
+        // Punchbag game
+        health: 100,
+        ended: false,
     },
     methods: {
         // Data & Methods
@@ -101,6 +105,18 @@ new Vue({
         addToB: function () {
             console.log('addToB');
             return this.addedAge + this.b;
+        },
+
+        // Punchbag game
+        punch: function () {
+            this.health -= 10;
+            if (this.health <= 0) {
+                this.ended = true;
+            }
+        },
+        restart: function () {
+            this.health = 100;
+            this.ended = false;
         },
     },
     computed: {
